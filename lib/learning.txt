@@ -1,0 +1,7 @@
+runApp()
+MaterialApp()
+theme
+intialRoute
+routes : { }
+Text() widget and it's properties
+diff between child and children[]
