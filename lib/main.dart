@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catelog/presentation/pages/home_page.dart';
 import 'package:flutter_catelog/presentation/pages/login_page.dart';
+import 'package:flutter_catelog/utils/my_routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
 
         routes: {
           "/": (context) => new LoginPage(),
-          '/home': (context) => HomePage(),
+          MyRoutes.homeRoute : (context) => HomePage(),
+          MyRoutes.loginRoute : (context) => LoginPage(),
         }
         
         //Scaffold widget also provide by material app

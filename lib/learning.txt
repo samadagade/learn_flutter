@@ -1,7 +1,22 @@
+main()
 runApp()
+myApp() //own custom widget
 MaterialApp()
+home
 theme
 intialRoute
 routes : { }
 Text() widget and it's properties
 diff between child and children[]
+sizedbox
+padding
+elevated button (takes two required fields child onpressed)
+
+first take note for below concepts then start
+text form field
+single child scroll view
+Stateful widget
+setState
+Stateless Widget
+Animated Container
+Future Delay
