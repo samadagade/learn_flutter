@@ -64,44 +64,44 @@ class _LoginPageState extends State<LoginPage> {
                   //we are creating own elevated button
                   //now to create any widget clickable we have two widget
                   // 1. GestureDetecture : do not show any effect after clicking on widget
-                  // 2. InkWell : show effect after clicking on widget
+                  // 2. InkWell : show effect after clicking on widget i.e. ripple effect
 
-                  // InkWell(
-                  //   onTap: () async {
-                  //     setState(() {
-                  //       _changeButton = true;
-                  //     });
-                  //     await Future.delayed(Duration(seconds: 2));
-                  //     Navigator.pushNamed(context, MyRoutes.homeRoute);
-                  //   },
-                  //   child: AnimatedContainer(
-                  //     duration: Duration(seconds: 2),
-                  //     //alignment align child within container
-                  //     alignment: Alignment.center,
-                  //     height: 50, //height of container
-                  //     width: _changeButton ? 50 : 150, //width of conatainer
-                  //     child: _changeButton? Icon(Icons.done)
-                  //            : Text(
-                  //             "Login",
-                  //             style: TextStyle(color: Colors.white, fontSize: 20),
-                  //           ),
-                  //     decoration: BoxDecoration(
-                  //       color: Colors.deepPurple,
-                  //       borderRadius:
-                  //           BorderRadius.circular(_changeButton ? 50 : 100),
-                  //     ),
-                  //   ),
-                  // )
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, MyRoutes.homeRoute);
-                      },
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(150, 40),
-                            backgroundColor: Colors.deepPurple, // Background color
+                  InkWell(
+                    onTap: () async {
+                      setState(() {
+                        _changeButton = true;
+                      });
+                      await Future.delayed(Duration(seconds: 2));
+                      Navigator.pushNamed(context, MyRoutes.homeRoute);
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(seconds: 2),
+                      //alignment align child within container
+                      alignment: Alignment.center,
+                      height: 50, //height of container
+                      width: _changeButton ? 50 : 150, //width of conatainer
+                      child: _changeButton? Icon(Icons.done)
+                             : Text(
+                              "Login",
+                              style: TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple,
+                        borderRadius:
+                            BorderRadius.circular(_changeButton ? 50 : 100),
                       ),
-                      child: Text("Login", style: TextStyle(color: Colors.white),)
-                  ),
+                    ),
+                  )
+                  // ElevatedButton(
+                  //     onPressed: () {
+                  //       Navigator.pushNamed(context, MyRoutes.homeRoute);
+                  //     },
+                  //     style: ElevatedButton.styleFrom(
+                  //       minimumSize: Size(150, 40),
+                  //           backgroundColor: Colors.deepPurple, // Background color
+                  //     ),
+                  //     child: Text("Login", style: TextStyle(color: Colors.white),)
+                  // ),
                 ],
               ),
             ),
