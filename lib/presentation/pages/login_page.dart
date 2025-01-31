@@ -28,8 +28,6 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget build(BuildContext context) {
-    TextEditingController _nameController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
     return Scaffold(
       backgroundColor: Colors.white,
       body: Form(
@@ -57,17 +55,16 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     TextFormField(
-                      controller: _nameController,
                       decoration: InputDecoration(
                         hintText: "Enter User Name",
                         labelText: "User Name",
                       ),
-                      // onChanged: (value) {
-                      //   //it called build method again and rebuild the UI
-                      //   setState(() {
-                      //     _name = value;
-                      //   });
-                      //},
+                      onChanged: (value) {
+                        //it called build method again and rebuild the UI
+                        setState(() {
+                          _name = value;
+                        });
+                      },
                       validator: (value){
                         if(value == null || value.isEmpty){
                           return "User Name should not be Empty";
@@ -79,7 +76,6 @@ class _LoginPageState extends State<LoginPage> {
                       height: 10,
                     ),
                     TextFormField(
-                      controller: _passwordController,
                       obscureText:
                           true, //hide the password, by default it's false
                       decoration: InputDecoration(
