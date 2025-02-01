@@ -9,7 +9,7 @@ class MyDrawer extends StatelessWidget {
         "https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png ";
     return Drawer(
       child: Container(
-        color: Colors.deepPurple,
+        color: Colors.deepPurple[400],
         child: ListView(
           children: [
             DrawerHeader(
