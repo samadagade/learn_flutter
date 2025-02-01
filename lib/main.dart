@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         ),
 
         //home: LoginPage(),
-        initialRoute: '/', //The initialRoute property defines which route the app should start with.
+        initialRoute: MyRoutes.homeRoute, //The initialRoute property defines which route the app should start with.
 
         routes: {
           "/": (context) => new LoginPage(),
